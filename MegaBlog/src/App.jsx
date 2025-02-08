@@ -3,6 +3,8 @@ import { useEffect,  useState } from 'react'
 import './App.css'
 import { useDispatch } from 'react-redux'
 import authservice from './appwrite/auth'
+import {login, logout} from './store/authSlice'
+import { Footer, Header } from './components'
 
 function App() {
 
@@ -18,17 +20,29 @@ function App() {
   //as soon this service get load then ask to the service that the user is loged in or not, for this use use effect
   useEffect(()=>{
     authservice.getCurrentUser()
-    .then(()=>{})
-    .finally()
+    .then((userData)=>{
+      if(userData){
+        dispatch(login({userData}))
+      }else{
+        dispatch(logout())
+      }
+    })
+    .finally(()=> setLoading(false))
   }, /**dependency array */ [])
 
  
 
-  return (
-    <>
-      <h1>app block with appwrite</h1>
-    </>
-  )
+  return !loading ? (
+    <div className='min-h-scr flex flex-wrap content-between bg-gray-400'> 
+    <div className='w-full block'>
+      <Header/>
+      <main>
+        TODO:  {/** outlet */}
+      </main>
+      <Footer/>
+    </div>
+    </div>
+  ): null
 }
 
 export default App

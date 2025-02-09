@@ -6,6 +6,7 @@ import LogoutBtn from "./header/LogoutBtn";
 import Button from "./Button";
 import Input from "./input";
 import Select from "./Select";
+import PostCard from "./PostCard";
 
 // this file indication fo direct and short tricks to just importing and 
 // exporting the header footer in short method just to import index.js
@@ -21,5 +22,6 @@ export  {
     Input,
     Button,
     Select,
+    PostCard,
 
 }

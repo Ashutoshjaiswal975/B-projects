@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 import authservice from './appwrite/auth'
 import {login, logout} from './store/authSlice'
 import { Footer, Header } from './components'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
@@ -36,8 +37,9 @@ function App() {
    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
   <div>
     <Header/>
-    
-    text
+    <main>
+     TODO {/* <Outlet/> */}
+    </main>
     <Footer/>
   </div>
 

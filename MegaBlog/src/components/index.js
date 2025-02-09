@@ -3,6 +3,8 @@ import Footer from "./footer/Footer";
 import Container from "./container/Container";
 import Logo from "./Logo";
 import LogoutBtn from "./header/LogoutBtn";
+import Button from "./Button";
+import Input from "./input";
 
 // this file indication fo direct and short tricks to just importing and 
 // exporting the header footer in short method just to import index.js
@@ -15,4 +17,7 @@ export  {
     Logo,
     Container,
     LogoutBtn,
+    Input,
+    Button
+
 }

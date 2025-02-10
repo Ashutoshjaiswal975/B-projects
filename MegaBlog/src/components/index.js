@@ -8,6 +8,7 @@ import Input from "./input";
 import Select from "./Select";
 import PostCard from "./PostCard";
 import Login from "./Login";
+import Protected from "./AuthLayout";
 
 // this file indication fo direct and short tricks to just importing and 
 // exporting the header footer in short method just to import index.js
@@ -25,5 +26,6 @@ export  {
     Select,
     PostCard,
     Login,
+    Protected,
 
 }

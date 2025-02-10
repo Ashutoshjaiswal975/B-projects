@@ -10,6 +10,7 @@ import PostCard from "./PostCard";
 import Login from "./Login";
 import Protected from "./AuthLayout";
 import RTE from "./RTE";
+import PostForm from "./post-form/PostForm";
 
 // this file indication fo direct and short tricks to just importing and 
 // exporting the header footer in short method just to import index.js
@@ -29,5 +30,6 @@ export  {
     Login,
     Protected,
     RTE,
+    PostForm,
 
 }
